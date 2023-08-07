@@ -1,9 +1,10 @@
-
 import Image from "next/image";
-import styles from './page.module.css'
+import styles from "./page.module.css"
 import heroImg from "../../public/hero.png"
+import Button from "@/components/button/Button";
+import React from 'react'
 
-export default function Home() {
+function page() {
   return (
     <div className={styles.container}>
       <div className={styles.item}>
@@ -14,7 +15,8 @@ export default function Home() {
           Turning your Idea into Reality. We bring together the teams from the
           global tech industry.
         </p>
-        {/* <Button url="/portfolio" text="See Our Works"/> */}
+        <Button url="/portfolio" text="See Our Works"/>
+        {/* <button  className={styles.button}>See Our Works</button> */}
       </div>
       <div className={styles.item}>
         <Image src={heroImg} alt="" className={styles.img} />
@@ -22,3 +24,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default page
