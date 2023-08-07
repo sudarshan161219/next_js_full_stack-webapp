@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import React from 'react'
-
+import styles from './navbar.module.css'
 const links = [
   {
     id: 1,
@@ -38,13 +38,13 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div>
-      <Link href="/" >ShWebDev</Link>
-      <div>
+    <div className={styles.container}>
+      <Link className={styles.logo} href="/" >ShWebDev</Link>
+      <div className={styles.links}>
         {links.map((item) => (
-          <Link key={item.id} href={item.url} >{item.title}</Link>
+          <Link className={styles.link} key={item.id} href={item.url} >{item.title}</Link>
         ))}
-        <button onClick={() => {console.log("logged out")}}  >Logout</button>
+        <button className={styles.logout} onClick={() => { console.log("logged out") }}  >Logout</button>
       </div>
     </div>
   )

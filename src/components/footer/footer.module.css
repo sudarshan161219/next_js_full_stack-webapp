@@ -1,0 +1,23 @@
+.container {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgcontainer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.icons {
+  opacity: 0.5;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+
+.icons:hover {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+  opacity: 1;
+  cursor: pointer;
+}
